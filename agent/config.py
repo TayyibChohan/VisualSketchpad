@@ -4,9 +4,15 @@ import os
 MAX_REPLY = 10
 
 # set up the LLM for the agent
-os.environ['OPENAI_API_KEY'] = '[YOUR OPENAI API KEY]'
 os.environ["AUTOGEN_USE_DOCKER"] = "False"
-llm_config={"cache_seed": None, "config_list": [{"model": "gpt-4o", "temperature": 0.0, "api_key": os.environ.get("OPENAI_API_KEY")}]}
+# llm_config={"cache_seed": None, "config_list": [{"model": "gpt-4o", "temperature": 0.0, "api_key": os.environ.get("OPENAI_API_KEY")}]}
+llm_config_qwen2vl={
+        # Using Qwen2-VL deployed at any openai-compatible service such as vLLM:
+        "model_type": "qwenvl_oai",
+        "model": "Qwen/Qwen2-VL-7B-Instruct",
+        "model_server": "http://localhost:8091/v1",  # api_base
+        "api_key": 'EMPTY',
+    }
 
 
 # use this after building your own server. You can also set up the server in other machines and paste them here.

@@ -74,4 +74,4 @@ demo = gr.Interface(fn=detection, inputs=[gr.Image(type="filepath"),
                     outputs=[gr.Image(type="pil"), "json"]
                     )
                     
-demo.launch(share=True, server_name="localhost", server_port=8081)
+demo.launch(share=True, server_name="localhost", server_port=8093)

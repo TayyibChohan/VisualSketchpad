@@ -55,7 +55,7 @@ demo = gr.Interface(fn=predict_depthmap, inputs=[gr.Image()],
                     outputs=[gr.Image(type="pil")]
                     )
                     
-demo.launch(share=True, server_name="localhost", server_port=8082)
+demo.launch(share=True, server_name="localhost", server_port=8094)
 
 
 

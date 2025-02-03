@@ -68,4 +68,4 @@ demo = gr.Interface(fn=gradio_interface, inputs=[gr.Image(type="pil"),
                     outputs=[gr.Image(type="pil"), "json"]
                     )
                     
-demo.launch(share=True, server_name="localhost", server_port=8080)
+demo.launch(share=True, server_name="localhost", server_port=8092)
